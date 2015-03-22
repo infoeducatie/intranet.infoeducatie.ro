@@ -2,12 +2,14 @@
 # The humans responsible & technology colophon
 
 # TEAM
-
-    <name> -- <role> -- <twitter>
+    Alex Coman -- Whisky Cloud Engineer
+    Alex Palcuie -- Senior Drinking Hacker
+    Robert Dolca -- Technical Tequilla Manager
+    Vlad Temian -- Python & Wine Aficionado
 
 # THANKS
 
-    <name>
+    Bogdan Gaza -- Ză Master
 
 # TECHNOLOGY COLOPHON
 
