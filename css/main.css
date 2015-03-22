@@ -101,8 +101,8 @@ html {
     font-family: 'PT Mono', 'Arial';
 }
 
-#container{
-    width: 800px;
+#container {
+    width: 780px;
     margin: 0 auto;
 }
 
@@ -110,36 +110,62 @@ header {
     text-align: center;
 }
 
-ul {
+nav {
+    text-align: center;
+    font-size: 160%;
+}
+
+nav p {
+    line-height: 30px;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li:after {
+    content: ", ";
+}
+
+nav ul li:last-child:after {
+    content: "";
+}
+
+nav ul li a {
+    color: #000;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #888;
+}
+
+nav ul {
+    display: inline;
+    padding: 0;
+}
+
+nav p {
+    display: inline;
+}
+
+.content {
     font-size: 140%;
 }
 
-#warnings {
-    color: red;
-}
-
-table td {
+#program td {
     vertical-align: top;
 }
 
-table .time{
+#program .time {
     width: 80px;
 }
 
-table .name {
+#program .name {
 }
 
-table .header {
+#program .header {
     font-weight: bold;
-}
-
-#flex {
-    display: flex;
-    padding-top: 40px;
-}
-
-#flex .item{
-    flex-grow: 1;
 }
 
 footer {
@@ -254,6 +280,27 @@ footer {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+
+@media all and (min-width: 1024px) {
+    #container {
+        width: 1024px;
+    }
+
+    .column {
+        width: 330px;
+        float: left;
+    }
+}
+
+@media (max-width: 780px) {
+    #container {
+        width: auto;
+        margin: 10px;
+    }
+    nav ul li {
+        display: block;
+    }
+}
 
 @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */

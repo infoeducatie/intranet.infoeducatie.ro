@@ -5,8 +5,8 @@
 $(function() {
   schedule.forEach(function(day) {
     var $program = $('#program'),
-        $h2 = $('<h2>', {text: day.name});
-    $program.append($h2);
+        $h1 = $('<h1>', {text: day.name});
+    $program.append($h1);
 
     var $table = $('<table>');
     day.entries.forEach(function(entry) {
