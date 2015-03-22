@@ -151,8 +151,7 @@ var warnings = [
 
 var quotes = [
   'Premature optimization is the root to all evil - Dijkstra',
-  '640 kB ought to be enough for anybody - Bill Gates',
-  'Computer science is no more about computers than astronomy is about telescopes. - Edsger Dijkstra',
+  'Computer Science is no more about computers than astronomy is about telescopes. - Edsger Dijkstra',
   'Software is like sex: it\'s better when it\'s free. - Linus Torvalds',
   'Sharing is good, and with digital technology, sharing is easy. - Richard Stallman',
 ];
