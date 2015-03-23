@@ -1,0 +1,25 @@
+{
+  "name": "intranet.infoeducatie.ro",
+  "version": "0.2.0",
+  "description": "Intranet for infoeducatie.ro",
+  "main": "index.html",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "lint": "jshint js/config.js js/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/infoeducatie/intranet.infoeducatie.ro.git"
+  },
+  "author": "InfoEducatie Core Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/infoeducatie/intranet.infoeducatie.ro/issues"
+  },
+  "homepage": "https://github.com/infoeducatie/intranet.infoeducatie.ro",
+  "devDependencies": {
+    "jshint": "^2.6.3"
+  }
+}

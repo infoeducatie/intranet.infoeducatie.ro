@@ -101,8 +101,8 @@ html {
     font-family: 'PT Mono', 'Arial';
 }
 
-#container{
-    width: 800px;
+#container {
+    width: 780px;
     margin: 0 auto;
 }
 
@@ -110,36 +110,62 @@ header {
     text-align: center;
 }
 
-ul {
+nav {
+    text-align: center;
+    font-size: 160%;
+}
+
+nav p {
+    line-height: 30px;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li:after {
+    content: ", ";
+}
+
+nav ul li:last-child:after {
+    content: "";
+}
+
+nav ul li a {
+    color: #000;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #888;
+}
+
+nav ul {
+    display: inline;
+    padding: 0;
+}
+
+nav p {
+    display: inline;
+}
+
+.content {
     font-size: 140%;
 }
 
-#warnings {
-    color: red;
-}
-
-table td {
+#program td {
     vertical-align: top;
 }
 
-table .time{
+#program .time {
     width: 80px;
 }
 
-table .name {
+#program .name {
 }
 
-table .header {
+#program .header {
     font-weight: bold;
-}
-
-#flex {
-    display: flex;
-    padding-top: 40px;
-}
-
-#flex .item{
-    flex-grow: 1;
 }
 
 footer {
@@ -255,85 +281,24 @@ footer {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+@media all and (min-width: 1024px) {
+    #container {
+        width: 1024px;
+    }
+
+    .column {
+        width: 330px;
+        float: left;
+    }
 }
 
-@media print,
-       (-o-min-device-pixel-ratio: 5/4),
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
+@media (max-width: 780px) {
+    #container {
+        width: auto;
+        margin: 10px;
+    }
+    nav ul li {
+        display: block;
+    }
 }
-
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid required HTTP connection: h5bp.com/r
-   ========================================================================== */
-
-@media print {
-    * {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster: h5bp.com/s */
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-
-    /*
-     * Don't show links for images, or javascript/internal links
-     */
-
-    .ir a:after,
-    a[href^="javascript:"]:after,
-    a[href^="#"]:after {
-        content: "";
-    }
-
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    thead {
-        display: table-header-group; /* h5bp.com/t */
-    }
-
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    img {
-        max-width: 100% !important;
-    }
-
-    @page {
-        margin: 0.5cm;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
 }

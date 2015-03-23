@@ -1,4 +1,11 @@
-schedule = [
+/* This file should resemble a JSON you receive from an API. We might add a
+backend when we have time. */
+
+'use strict';
+
+ /* jshint unused:false */
+
+var schedule = [
   {
     'name': 'Friday',
     'entries': [
@@ -28,22 +35,22 @@ schedule = [
       },
     ]
   }
-]
+];
 
-stickies = [
-  '<a href="python.html">Python</a>',
+var stickies = [
+  '<a href="pages/python.html">Python</a>',
   '<a href="http://intranet.infoeducatie.ro:8000">Multimedia upload</a>',
   '<a href="https://drive.google.com/folderview?id=0B6Zy3yGhqiIwZDhyYmFIUmpJelk&usp=sharing">Participants in the open</a>',
   '<a href="https://docs.google.com/document/d/1axdEFAujmqpwBNq7t8sqdVpP2qtsiD3-CNVslY2o8MY/edit?usp=sharing">Kit for the robots open</a>',
   '<a href="https://drive.google.com/folderview?id=0B4SZODI8XCNzQ1U2aW4yUFptaFE&usp=sharing">Criterias</a>',
-  '<a href="treasure.html">Treasure Hunting continues</a>',
-]
+  '<a href="pages/treasure.html">Treasure Hunting continues</a>',
+];
 
-warnings = [
+var warnings = [
   {
     'day': 'Saturday',
     'time': '01:59',
-    'message': 'The <a href="treasure.html">treasure hunting</a> details have been updated.'
+    'message': 'The <a href="pages/treasure.html">treasure hunting</a> details have been updated.'
   },
   {
     'day': 'Friday',
@@ -88,7 +95,7 @@ warnings = [
   {
     'day': 'Wednesday',
     'time': '14:30',
-    'message': 'The treasure hunt continues. <a href="treasure.html">Check it out!</a>'
+    'message': 'The treasure hunt continues. <a href="pages/treasure.html">Check it out!</a>'
   },
   {
     'day': 'Wednesday',
@@ -140,12 +147,11 @@ warnings = [
     'time': '22:16',
     'message': 'Please check the intranet as often as you can.'
   }
-]
+];
 
-quotes = [
+var quotes = [
   'Premature optimization is the root to all evil - Dijkstra',
-  '640 kB ought to be enough for anybody - Bill Gates',
-  'Computer science is no more about computers than astronomy is about telescopes. - Edsger Dijkstra',
-  "Software is like sex: it's better when it's free. - Linus Torvalds",
-  "Sharing is good, and with digital technology, sharing is easy. - Richard Stallman",
-]
+  'Computer Science is no more about computers than astronomy is about telescopes. - Edsger Dijkstra',
+  'Software is like sex: it\'s better when it\'s free. - Linus Torvalds',
+  'Sharing is good, and with digital technology, sharing is easy. - Richard Stallman',
+];

@@ -1,49 +1,42 @@
-schedule.forEach(function (day){
-  var $program = $('#program')
-  var $h2 = $('<h2>', {text: day.name})
-  $program.append($h2)
+'use strict';
 
-  var $table = $('<table>')
+/* global schedule, warnings, stickies, quotes */
 
-  day.entries.forEach(function (entry) {
-    var $row = $('<tr>')
-      .append($('<td>', {text: entry.time, class: 'time'}))
-      .append($('<td>', {text: entry.name, class: 'name'}))
-    $table.append($row)
-  })
-  $program.append($table)
-})
+$(function() {
+  schedule.forEach(function(day) {
+    var $program = $('#program'),
+        $h1 = $('<h1>', {text: day.name});
+    $program.append($h1);
 
-var getWarning = function(warning) {
-  return warning.day + ", " + warning.time + " - " + warning.message
-}
+    var $table = $('<table>');
+    day.entries.forEach(function(entry) {
+      var $row = $('<tr>').append($('<td>', {text: entry.time, class: 'time'}))
+                          .append($('<td>', {text: entry.name, class: 'name'}));
+      $table.append($row);
+    });
 
-if (warnings) {
-  var $warning = $('#warnings')
-  last5 = warnings.slice(0, 5)
-  last5.forEach(function(warning){
-    $warning.append($('<li>')
-                    .append($('<p>', {html: getWarning(warning)})))
-  })
-}
+    $program.append($table);
+  });
 
-var index = parseInt(Math.random()*100) % quotes.length
-$('#quote').append($('<p>', {text:quotes[index]}))
+  function getWarning(warning) {
+    return warning.day + ', ' + warning.time + ' - ' + warning.message;
+  }
 
-if (stickies) {
-  var $sticky = $('#sticky')
-  stickies.forEach(function(sticky) {
-    $sticky.append($('<li>')
-                    .append($('<p>', {html: sticky})))
-  })
-}
+  if (warnings) {
+    var $warning = $('#warnings');
+    var last5 = warnings.slice(0, 5);
+    last5.forEach(function(warning) {
+      $warning.append($('<li>').append($('<p>', {html: getWarning(warning)})));
+    });
+  }
 
-/* TODOs:
+  var index = parseInt(Math.random()*100) % quotes.length;
+  $('#quote').append($('<p>', {text:quotes[index]}));
 
-* add Fb list w/ jury
-* add Google+ widget w/ smth
-* cauta citat limbaje procedurale Dijkstra
-* yml to json
-* table cu randuri alternative cu background
-
-*/
+  if (stickies) {
+    var $sticky = $('#sticky');
+    stickies.forEach(function(sticky) {
+      $sticky.append($('<li>').append($('<p>', {html: sticky})));
+    });
+  }
+});
