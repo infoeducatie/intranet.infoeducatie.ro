@@ -9,7 +9,7 @@
 
 # THANKS
 
-    Bogdan Gaza -- Ză Master
+    Bogdan Gaza -- Ză Infra Master
 
 # TECHNOLOGY COLOPHON
 
